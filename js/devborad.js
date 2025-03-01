@@ -5,7 +5,7 @@ const completedBtns = document.querySelectorAll(".ButtonClass");
 
 for (let i = 0; i < completedBtns.length; i++) {
   const completedButtons = completedBtns[i];
-
+  
   completedButtons.addEventListener("click", function (event) {
     const count = document.getElementById("countText");
     
@@ -23,11 +23,13 @@ for (let i = 0; i < completedBtns.length; i++) {
 
     seen.innerText = seenTotalText;
 
+
+    
     const time = new Date();
 
     const times = time.toLocaleTimeString();
 
-    
+    const titles = document.querySelectorAll(".title").innerText;
 
     const historyContainer = document.getElementById("historyBox");
 
