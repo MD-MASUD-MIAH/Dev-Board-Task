@@ -60,7 +60,7 @@ page.addEventListener('click',function(event){
     
     
 
-window.location.href= '../htm/second.html'
+window.location.href= '../second.html'
 
 
 })
