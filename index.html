@@ -7,16 +7,36 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css" rel="stylesheet" type="text/css" />
 <script src="https://cdn.tailwindcss.com"></script>
+<style>
+    
+    @import url('https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Bebas+Neue&family=Bokor&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Inder&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Manrope:wght@200..800&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montagu+Slab:opsz,wght@16..144,100..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sora:wght@100..800&family=Urbanist:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+    
+    .poppins {
+      font-family: "Poppins", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+    }
+    
+    
+    .story{
 
+        padding: 8px 8px;
+        background-color:#F4F7FF;
+        border-radius: 8px;
+        font-size: 14px;
+    }
+      
+    </style>
+    
 </head>
-<body class="bg-[#F4F7FF]">
+<body class="bg-[#F4F7FF] poppins">
 
 
     <!-- header section  -->
 <header class="w-11/12 mx-auto pt-5">
 
     <!-- navbar section  -->
-    <nav class="flex justify-between items-center px-10 py-5 bg-white rounded-2xl ">
+    <nav class="flex justify-between items-center px-10 py-5 bg-white rounded-2xl shadow-lg">
 <div class="flex justify-center items-center gap-3">
     <img src="assets/logo.png" alt="">
  <h1 class="text-4xl hidden md:block">Dev<span class="font-bold">Board</span></h1>
@@ -25,12 +45,14 @@
 <div class="flex items-center justify-center gap-9">
     <div class="flex justify-center items-center gap-2 px-4 py-2 bg-[#F4F7FF] rounded-3xl">
         <img src="assets/checkbox.png" alt="">
-        <h1 class="text-[30px] font-bold">23</h1>
+        <h1 class="text-[30px] font-bold " id="seenText">23</h1>
     </div>
     <img src="assets/theme-btn.png" alt="">
 </div>
     </nav>
 </header>
+
+
 
 <main class="w-11/12 mx-auto mt-5">
 
@@ -50,12 +72,12 @@
                 </div>
                 <div>
                     <p class="text-[#00303C]">Task Assigned</p>
-                <h1 class="font-bold text-[32px]">05</h1>
+                <h1 class="font-bold text-[32px] " id="countText">6</h1>
                 </div>
             </div>
 
 
-            <div class="px-5 py-3 md:px-10 md:py-6 flex text-white items-center gap-6 rounded-2xl bg-gradient-to-r from-[#3752FD] via-[#6C7FFA] to-[#9BA8F8] w-full md:w-[50%]">
+            <div class="px-5 py-3 md:px-10 md:py-6 flex text-white items-center gap-6 rounded-2xl bg-gradient-to-r from-[#3752FD] via-[#6C7FFA] to-[#9BA8F8] w-full md:w-[50%]" id="nextPage">
 <img src="assets/board.png" alt="">
 <h1 class="text-2xl font-medium">Discover Something <br>New Today!</h1>
             </div>
@@ -79,6 +101,10 @@
            
         </div>
         <div class="border-b-2 border-dashed"></div>
+
+
+
+
 <div class="cards grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 px-6 py-6 ">
 
     <div class="card bg-[#F4F7FF] py-6 px-6 flex flex-col gap-4 rounded-lg">
@@ -119,10 +145,12 @@
     </div>
 
 </div>
-    <div class="card bg-[#F4F7FF] py-6 px-6 flex flex-col gap-4 rounded-lg">
-<p class="bg-white rounded-lg py-2 px-4 w-[114px]">ShopEase</p>
 
-<h1 class="title font-medium text-2xl">Fix Mobile Button Issue </h1>
+
+    <div class="card bg-[#F4F7FF] py-6 px-6 flex flex-col gap-4 rounded-lg">
+<p class="bg-white rounded-lg py-2 px-4 w-[114px]">SwiftPay</p>
+
+<h1 class="title font-medium text-2xl">Optimize  Home page </h1>
 <p class="bg-white py-4 px-4 text-gray-500 rounded-lg ">Debug using Chorem DevTools <br>
     check for overlapping
 </p>
@@ -138,10 +166,11 @@
     </div>
 
 </div>
-    <div class="card bg-[#F4F7FF] py-6 px-6 flex flex-col gap-4 rounded-lg">
-<p class="bg-white rounded-lg py-2 px-4 w-[114px]">ShopEase</p>
 
-<h1 class="title font-medium text-2xl">Fix Mobile Button Issue </h1>
+    <div class="card bg-[#F4F7FF] py-6 px-6 flex flex-col gap-4 rounded-lg">
+<p class="bg-white rounded-lg py-2 px-4 w-[114px]">Meta</p>
+
+<h1 class="title font-medium text-2xl">Add new emoji 🤲</h1>
 <p class="bg-white py-4 px-4 text-gray-500 rounded-lg ">Debug using Chorem DevTools <br>
     check for overlapping
 </p>
@@ -157,10 +186,11 @@
     </div>
 
 </div>
-    <div class="card bg-[#F4F7FF] py-6 px-6 flex flex-col gap-4 rounded-lg">
-<p class="bg-white rounded-lg py-2 px-4 w-[114px]">ShopEase</p>
 
-<h1 class="title font-medium text-2xl">Fix Mobile Button Issue </h1>
+    <div class="card bg-[#F4F7FF] py-6 px-6 flex flex-col gap-4 rounded-lg">
+<p class="bg-white rounded-lg py-2 px-4 w-[124px]">Google LLC</p>
+
+<h1 class="title font-medium text-2xl">Integrate OpenAI API  </h1>
 <p class="bg-white py-4 px-4 text-gray-500 rounded-lg ">Debug using Chorem DevTools <br>
     check for overlapping
 </p>
@@ -176,10 +206,12 @@
     </div>
 
 </div>
-    <div class="card bg-[#F4F7FF] py-6 px-6 flex flex-col gap-4 rounded-lg">
-<p class="bg-white rounded-lg py-2 px-4 w-[114px]">ShopEase</p>
+    
 
-<h1 class="title font-medium text-2xl">Fix Mobile Button Issue </h1>
+<div class="card bg-[#F4F7FF] py-6 px-6 flex flex-col gap-4 rounded-lg">
+<p class="bg-white rounded-lg py-2 px-4 w-[114px]">Glassdoar</p>
+
+<h1 class="title font-medium text-2xl">Improve Job searching  </h1>
 <p class="bg-white py-4 px-4 text-gray-500 rounded-lg ">Debug using Chorem DevTools <br>
     check for overlapping
 </p>
@@ -190,7 +222,7 @@
         <h1 class="font-bold">21 March 2025</h1>
        </div>
         
-<button class="ButtonClass btn text-white bg-[#3752FD] px-5 py-[10px] rounded-lg">Completed</button>
+<button class="ButtonClass btn block text-white bg-[#3752FD] px-5 py-[10px] rounded-lg">Completed</button>
         
     </div>
 
@@ -222,16 +254,17 @@
     </div>
 
     <div class="flex items-center justify-center">
-        <button class="ButtonClass btn text-white bg-[#3752FD] px-5 py-[10px] rounded-lg">Clear History</button>
+        <button class=" btn text-white bg-[#3752FD] px-5 py-[10px] rounded-lg" id="HistoryButton">Clear History</button>
     </div>
 
     <div class="mt-4 border-b-2 border-dashed">
 
     </div>
 
-    <div class="py-6 px-6">
-        <p class="bg-[#F4F7FF] px-2 py-2">adipisicing elit. Beatae reiciendis quisquam consectetur nam! Vero magnam architecto, </p>
-    </div>
+    <div class="py-6 px-6 text-[14px] space-y-2" id="historyBox">
+
+
+        
 </div>
 
 
@@ -241,6 +274,7 @@
         
     </section>
 </main>
-
+<script src="js/devborad.js"></script>
+<script src="js/btn.js"></script>
 </body>
 </html>
