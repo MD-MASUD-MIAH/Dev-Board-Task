@@ -8,7 +8,7 @@ for (let i = 0; i < completedBtns.length; i++) {
 
   completedButtons.addEventListener("click", function (event) {
     const count = document.getElementById("countText");
-
+    
     let unseenTotalText = parseInt(count.innerText);
 
     unseenTotalText = unseenTotalText - 1;
@@ -27,7 +27,7 @@ for (let i = 0; i < completedBtns.length; i++) {
 
     const times = time.toLocaleTimeString();
 
-    const titles = document.querySelectorAll(".title").innerText;
+    
 
     const historyContainer = document.getElementById("historyBox");
 
@@ -73,5 +73,21 @@ const historyContainer = document.getElementById('historyBox')
 
   historyContainer.innerText= ' '
 
+
+})
+
+
+const colorButton = document.getElementById('colorbtn').addEventListener('click',function(event){
+
+const colorCode= 'abcdef0123456789'
+
+let colorhes ='#'
+
+for(let i = 0; i<6 ; i++){
+  
+  colorhes= colorhes+colorCode[Math.floor(Math.random()*16)]}
+
+
+document.getElementById('bdy').style.backgroundColor =` ${colorhes}`
 
 })
