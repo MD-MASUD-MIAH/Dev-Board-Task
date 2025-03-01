@@ -8,6 +8,12 @@ for (let i = 0; i < completedBtns.length; i++) {
   completedButtons.addEventListener("click", function (event) {
     const count = document.getElementById("countText");
 
+   let titleCard = event.target.parentElement.parentElement.children[1].innerText;
+
+    
+    
+    
+
     let unseenTotalText = parseInt(count.innerText);
 
     unseenTotalText = unseenTotalText - 1;
@@ -22,20 +28,20 @@ for (let i = 0; i < completedBtns.length; i++) {
 
     seen.innerText = seenTotalText;
 
-    const div = completedButtons.closest(".card");
+    
 
-    const h1 = div.querySelectorAll(".title");
+    
     const time = new Date();
 
     const times = time.toLocaleTimeString();
 
-    const titles = document.querySelectorAll(".title").innerText;
+    
 
     const historyContainer = document.getElementById("historyBox");
 
     const createElement = document.createElement("p");
     createElement.classList.add("story");
-    createElement.innerText = `You have completed task ${h1}     at ${times} `;
+    createElement.innerText = `You have completed task ${titleCard}     at ${times} `;
 
     historyContainer.appendChild(createElement);
 
@@ -79,3 +85,25 @@ const colorButton = document
 
     document.getElementById("bdy").style.backgroundColor = ` ${colorhes}`;
   });
+
+
+  const day = document.getElementById('day')
+
+  const day1 = new Date()
+  const allDay =day1.getDay();
+  const dayarray = ['Sun','Mon','Tue','Wed','Fri','Sat']
+  const lastDay = dayarray[allDay];
+  
+
+  
+
+
+
+  const date = new Date();
+  const todayDate = date.getDate();
+  const month =date.getMonth() +1;
+  const year = date.getFullYear();
+
+   
+  day.innerText = `${lastDay}  , ${todayDate}/${month}/${year}`;
+   
