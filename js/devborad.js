@@ -56,6 +56,9 @@ for (let i = 0; i < completedBtns.length; i++) {
   });
 }
 
+
+  // ---------------DisCover Buttons next page --------------
+
 const page = document.getElementById("nextPage");
 
 page.addEventListener("click", function (event) {
@@ -64,6 +67,8 @@ page.addEventListener("click", function (event) {
   window.location.href = "./second.html";
 });
 
+
+//--------------  historyClear buttons---------------
 const htButton = document.getElementById("HistoryButton");
 
 htButton.addEventListener("click", function () {
@@ -71,6 +76,9 @@ htButton.addEventListener("click", function () {
 
   historyContainer.innerText = " ";
 });
+
+
+// ---------------backgroundColor Change buttons -----------
 
 const colorButton = document
   .getElementById("colorbtn")
@@ -86,6 +94,7 @@ const colorButton = document
     document.getElementById("bdy").style.backgroundColor = ` ${colorhes}`;
   });
 
+    // ----------currentDay --------------
 
   const day = document.getElementById('day')
 
@@ -97,7 +106,7 @@ const colorButton = document
 
   
 
-
+  // -------------- currenDate/Month/Year -------
 
   const date = new Date();
   const todayDate = date.getDate();
